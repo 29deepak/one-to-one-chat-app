@@ -1,0 +1,49 @@
+// import React, { useState, useEffect } from 'react';
+// import moment from 'moment';
+
+// const UserProfile = () => {
+//   const [user, setUser] = useState({
+//     id: 1,
+//     username: 'john_doe',
+//     lastSeen: '2023-01-16T15:45:00Z', // Replace with actual last seen timestamp
+//   });
+
+//   useEffect(() => {
+//     // Fetch user data including lastSeen from the server
+//     const fetchUserData = async () => {
+//       try {
+//         const response = await fetch('your-backend-api-endpoint');
+//         const data = await response.json();
+//         setUser(data.user);
+//       } catch (error) {
+//         console.error('Error fetching user data:', error);
+//       }
+//     };
+
+//     fetchUserData();
+//   }, []);
+
+//   const formatLastSeen = (lastSeen) => {
+//     const lastSeenMoment = moment(lastSeen);
+//     const now = moment();
+
+//     const diffMinutes = now.diff(lastSeenMoment, 'minutes');
+
+//     if (diffMinutes < 1) {
+//       return 'Online'; // User is currently online
+//     } else if (diffMinutes < 60) {
+//       return `${diffMinutes} minutes ago`;
+//     } else {
+//       return lastSeenMoment.format('LT'); // Display the time if it's a different day
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <h1>{user.username}</h1>
+//       <p>Last Seen: {formatLastSeen(user.lastSeen)}</p>
+//     </div>
+//   );
+// };
+
+// export default UserProfile;

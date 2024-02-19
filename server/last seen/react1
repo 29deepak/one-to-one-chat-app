@@ -1,0 +1,56 @@
+// import React, { useEffect, useState } from 'react';
+// import moment from 'moment';
+
+// const YourChatComponent = () => {
+//   const [messages, setMessages] = useState([
+//     { id: 1, text: 'Hello!', createdAt: '2023-01-16T10:30:00Z' },
+//     { id: 2, text: 'How are you?', createdAt: '2023-01-16T15:45:00Z' },
+//     { id: 3, text: 'Good morning!', createdAt: '2023-01-17T08:00:00Z' },
+//     // Add more messages with different dates
+//   ]);
+
+//   const groupMessagesByDate = () => {
+//     const groupedMessages = {};
+//     messages.forEach((message) => {
+//       const dateKey = moment(message.createdAt).format('YYYY-MM-DD');
+//       if (!groupedMessages[dateKey]) {
+//         groupedMessages[dateKey] = [];
+//       }
+//       groupedMessages[dateKey].push(message);
+//     });
+//     return groupedMessages;
+//   };
+
+//   const renderGroupedMessages = () => {
+//     const groupedMessages = groupMessagesByDate();
+//     return Object.keys(groupedMessages).map((dateKey) => (
+//       <div key={dateKey}>
+//         <h2>{formatDateHeading(dateKey)}</h2>
+//         {groupedMessages[dateKey].map((message) => (
+//           <p key={message.id}>{message.text}</p>
+//         ))}
+//       </div>
+//     ));
+//   };
+
+//   const formatDateHeading = (dateKey) => {
+//     const today = moment().format('YYYY-MM-DD');
+//     const yesterday = moment().subtract(1, 'days').format('YYYY-MM-DD');
+
+//     if (dateKey === today) {
+//       return 'Today';
+//     } else if (dateKey === yesterday) {
+//       return 'Yesterday';
+//     } else {
+//       return moment(dateKey).format('MMMM D, YYYY');
+//     }
+//   };
+
+//   return (
+//     <div>
+//       {renderGroupedMessages()}
+//     </div>
+//   );
+// };
+
+// export default YourChatComponent;

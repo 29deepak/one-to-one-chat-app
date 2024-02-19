@@ -1,0 +1,32 @@
+//---------------for the person-------------------------
+// const Sequelize = require('sequelize');
+// const { sequelize } = require('./db');
+
+// const User = sequelize.define('User', {
+//   // Other user properties
+//   username: {
+//     type: Sequelize.STRING,
+//     allowNull: false,
+//   },
+//   // Add a column for last seen timestamp
+//   lastSeen: {
+//     type: Sequelize.DATE,
+//   },
+// });
+
+// module.exports = User;
+
+// const updateLastSeen = async (userId) => {
+//     try {
+//       const user = await User.findByPk(userId);
+      
+//       if (user) {
+//         // Update the last seen timestamp to the current time
+//         await user.update({ lastSeen: new Date() });
+//       } else {
+//         console.error('User not found');
+//       }
+//     } catch (error) {
+//       console.error('Error updating last seen:', error);
+//     }
+//   };
